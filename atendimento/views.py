@@ -10,3 +10,4 @@ def home(request):
 def cliente_list(request):
     clientes = Cliente.objects.all()
     return render(request, 'cliente/list.html', {'clientes':clientes})
+
