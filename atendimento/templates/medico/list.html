@@ -21,17 +21,15 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item ">
-                    <a class="nav-link" href="/atendimento/">Home 
+                    <a class="nav-link" href="/atendimento/">Home
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="/atendimento/cliente">Cliente</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="/atendimento/medico" id="navbarDropdown">
-                        Médico
-                    </a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/atendimento/medico" id="navbarDropdown"> Médico</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">Action</a>
                         <a class="dropdown-item" href="#">Another action</a>
@@ -47,14 +45,13 @@
                 </li>
             </ul>
     </nav>
-    <div class="container-fluid">
+    <div class="container-flui">
         <div class="row">
             <div class="col-md-12">
-                <h1>Listagem de clientes</h1>
+                <h1>Listagem de medicos</h1>
                 <table class="table">
                     <thead>
                         <tr>
-
                             <th>Nome</th>
                             <th>Data Nascimento</th>
                             <th>CPF</th>
@@ -62,27 +59,27 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {% for cliente in clientes %}
+                        {% for medico in medicos %}
                         <tr>
-                            <td>{{cliente.nome}}</td>
-                            <td>{{cliente.dt_nasc}}</td>
-                            <td>{{cliente.cpf}}</td>
-                            <td>{{cliente.sexo}}</td>
+                            <td>{{medico.nome}}</td>
+                            <td>{{medico.dt_nasc}}</td>
+                            <td>{{medico.cpf}}</td>
+                            <td>{{medico.sexo}}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td>
-                                <p>Foram encontrados {{clientes | length}} cadastrados!</p>
+                            <td colspan="4">
+                                <p>Foram encontrados {{medicos | length}} cadastrados!</p>
                             </td>
                         </tr>
                     </tfoot>
                 </table>
+
             </div>
         </div>
     </div>
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
