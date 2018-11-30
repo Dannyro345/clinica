@@ -14,3 +14,7 @@ def cliente_list(request):
 def medico_list(request):
     medicos = Medico.objects.all()
     return render(request, 'medico/list.html', {'medicos':medicos})
+
+def cliente_show(request, cliente_id):
+    cliente = Cliente.objects.get(pk=cliente_id)
+    return render(request, 'cliente/show.html', {'cliente':cliente})    
