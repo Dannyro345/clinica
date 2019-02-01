@@ -1,9 +1,36 @@
-{% extends "base.html" %} 
-{% block daniela %}
-<form action="/atendimento/medico/form/"  method="POST">
-    {% csrf_token %}
-    {{form}}
+{% extends "base.html" %} {% block daniela %}
+<div class="row">
+    <div class="col-lg-12">
+        <section class="panel">
+            <header class="panel-heading">
+                Cadastrando Medico
+            </header>
+            <div class="panel-body">
+                <form action="/atendimento/medico/form/" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="{{for.nome.id_for_label}}">{{form.nome.label}}</label>
+                        {{form.nome}}
+                    </div>
+                    <div class="form-group">
+                        <label for="{{for.dt_nasc.id_for_label}}">{{form.dt_nasc.label}}</label>
+                        {{form.dt_nasc}}
+                    </div>
+                    <div class="form-group">
+                        <label for="{{for.cpf.id_for_label}}">{{form.cpf.label}}</label>
+                        {{form.cpf}}
+                    </div>
+                    <div class="form-group">
+                        <label for="{{for.sexo.id_for_label}}">{{form.sexo.label}}</label>
+                        {{form.sexo}}
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
 
-    <input type="submit" value="Vai..">
-</form>
+            </div>
+        </section>
+    </div>
+
+</div>
+
 {% endblock %}
