@@ -24,7 +24,6 @@
                     <th>Data Nascimento</th>
                     <th>CPF</th>
                     <th>Sexo</th>
-                    <th>#</th>
                 </tr>
             </thead>
             <tbody>
@@ -36,6 +35,8 @@
                     <td>{{cliente.sexo}}</td>
                     <td>
                         <a href="/atendimento/cliente/{{cliente.id}}/">Ver</a>
+                    <td>
+                        <a href="/atendimento/cliente/{{cliente.id}}/edit/">Edit</a>
                     </td>
                 </tr>
                 {% endfor %}
