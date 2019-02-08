@@ -23,7 +23,8 @@
                     <th>Data Nascimento</th>
                     <th>CPF</th>
                     <th>Sexo</th>
-                    <th>#</th>
+                    <th>    </th>
+                    <th>    </th>
                 </tr>
             </thead>
             <tbody>
@@ -35,6 +36,9 @@
                     <td>{{medico.sexo}}</td>
                     <td>
                         <a href="/atendimento/medico/{{medico.id}}/">Ver</a>
+                    </td>
+                    <td>
+                        <a href="/atendimento/medico/{{medico.id}}/edit/">Edit</a>  
                     </td>
                 </tr>
                 {% endfor %}
